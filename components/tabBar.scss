@@ -1,0 +1,57 @@
+.tab-container {
+  display: grid;
+  height: 130rpx;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+
+  .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+
+    .item-icon {
+      position: absolute;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 88rpx;
+      height: 88rpx;
+      border-radius: 50%;
+
+      &.checket {
+        top: -10px;
+        width: 90rpx;
+        height: 90rpx;
+        transition: top .3s, background-color .3s, border .1s;
+        border: 6px solid;
+        background-color: #ffc059;
+      }
+
+      &.nochecket {
+        top: 0;
+        width: 88rpx;
+        height: 88rpx;
+        transition: top .1s, border .1s;
+        border: 0 solid;
+      }
+
+      image {
+        width: 88%;
+        height: 88%;
+      }
+    }
+
+    .item-text {
+      font-size: 10px;
+      position: absolute;
+      bottom: 1px;
+      margin-top: 0;
+    }
+  }
+}

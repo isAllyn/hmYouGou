@@ -1,0 +1,84 @@
+{
+	"pages": [
+		{
+            "path" : "pages/shouYe/shouYe",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/fenLei/fenLei",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/gouWu/gouWu",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/zhonXin/zhonXin",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "custom-tab-bar/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar":{
+		"custom": true,
+		"list":[
+			{
+				"iconPath":"static/tabBar/shouYe.png",
+				"selectedIconPath":"static/tabBar/shouYe.png",
+				"pagePath":"pages/shouYe/shouYe",
+				"text":"首页"
+			},
+			{
+				"pagePath":"pages/fenLei/fenLei",
+				"iconPath":"static/tabBar/fenLei.png",
+				"selectedIconPath":"static/tabBar/fenLei.png",
+				"text":"分类"
+			},
+			{
+				"pagePath":"pages/gouWu/gouWu",
+				"selectedIconPath":"static/tabBar/gouWuChe.png",
+				"text":"购物车",
+				"iconPath":"static/tabBar/gouWuChe.png"
+			},
+			{
+				"pagePath":"pages/zhonXin/zhonXin",
+				"iconPath":"static/tabBar/huiYuan.png",
+				"selectedIconPath":"static/tabBar/huiYuan.png",
+				"text":"个人中心"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}
