@@ -4,7 +4,9 @@
             "path" : "pages/shouYe/shouYe",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "hmYouGou",
+				"navigationBarBackgroundColor":"#6f8da7",
+				"navigationBarTextStyle":"white",
                 "enablePullDownRefresh": false
             }
             
@@ -46,6 +48,9 @@
             
         }
     ],
+    "easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
 	"tabBar":{
 		"custom": true,
 		"list":[
@@ -80,5 +85,39 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
-	}
+	},
+	"subPackages":[
+		{
+			"root":"subpkg",
+			"pages":[
+				{
+				        "path" : "xiangQing/xiangQing",
+				        "style" :                                                                                    
+				    {
+				        "navigationBarTitleText": "",
+				        "enablePullDownRefresh": false
+				    }
+				    
+				    }
+                ,{
+                    "path" : "shopList/shopList",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+                ,{
+                    "path" : "search/search",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
+		}
+	]
 }

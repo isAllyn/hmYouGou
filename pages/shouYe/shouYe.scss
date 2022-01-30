@@ -1,0 +1,222 @@
+.shouYe-page {
+  /* 上部分 */
+  .top-container {
+    position: relative;
+    height: 400rpx;
+    color: teal;
+    background-color: #6f8da7;
+
+    /* 给轮播一个阴影看看 */
+    ::v-deep .u-swiper .u-swiper__wrapper .u-swiper__wrapper__item {
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    }
+
+    /* 搜索框 */
+    .search-container {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      transform: translateY(50%);
+      color: gray;
+
+      .search-box {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 100rpx;
+        margin: 0 auto;
+        text-indent: 1em;
+        background-color: #faf0d8;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+
+        .ticon-box {
+          font-size: 15px;
+          position: absolute;
+          top: 50%;
+          right: 8px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  /* 下部分 */
+  .bottom-container {
+    padding-top: 80rpx;
+    background-color: #343644;
+
+    /* 导航栏 */
+    .nav-container {
+      display: grid;
+      height: 188rpx;
+
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      justify-items: center;
+
+      .nav-item {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+
+        &:nth-child(2n-1) {
+          background-color: #696869;
+        }
+
+        .item-image {
+          position: absolute;
+          top: 0;
+          display: flex;
+          overflow: hidden;
+          align-items: flex-end;
+          justify-content: flex-end;
+          width: 100%;
+          height: 100%;
+
+          image {
+            width: 90%;
+            height: 90%;
+            -webkit-transform: rotateZ(-45deg);
+               -moz-transform: rotateZ(-45deg);
+                -ms-transform: rotateZ(-45deg);
+                    transform: rotateZ(-45deg);
+          }
+
+          /* 做个蒙版层 */
+          &::after {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            opacity: .5;
+            border-radius: 10px;
+            background-color: #696869;
+          }
+        }
+
+        .item-text {
+          font-size: 15px;
+          position: absolute;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding-bottom: 3px;
+          color: white;
+        }
+      }
+    }
+
+    /* 楼层列表 */
+    .list-container {
+      width: 100%;
+
+      .list-item {
+        width: 100%;
+        margin-top: 10px;
+
+        /* 标题 */
+        .item-title {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 70%;
+          height: 88rpx;
+          margin-left: 10px;
+          text-indent: 1em;
+          color: #acacad;
+          border: 3px solid black;
+          border-radius: 0 10px 0 0;
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+
+          &::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 98%;
+            height: 90%;
+            content: '';
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-radius: 0 10px 0 0;
+          }
+        }
+
+        /* 内容 卡片 */
+        .item-bd {
+          display: grid;
+          margin-top: 10px;
+          padding-right: 5px;
+          padding-left: 5px;
+
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          row-gap: 3px;
+          column-gap: 5px;
+
+          .bd-item {
+            position: relative;
+            overflow: hidden;
+            width: 98%;
+            height: 250rpx;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+
+            image {
+              width: 100%;
+              height: 100%;
+            }
+
+            .card-title {
+              font-size: 10px;
+              line-height: 50rpx;
+              position: absolute;
+              bottom: 3px;
+              width: 100%;
+              height: 50rpx;
+              text-indent: 1em;
+              letter-spacing: 3px;
+              color: rgb(139, 133, 133);
+              background-color: #231a1b;
+            }
+
+            .card-tip {
+              font-size: 10px;
+              position: absolute;
+              right: 0;
+              bottom: 30px;
+              display: flex;
+              align-items: center;
+              width: 80%;
+              height: 17px;
+              text-indent: 1em;
+              color: #9e7f50;
+              background-color: rgba(35, 26, 27, .8);
+
+              /* 三角 */
+              &::after {
+                position: absolute;
+                top: -4px;
+                right: 0;
+                content: '';
+                border: 2px solid;
+                border-color: transparent rgba(35, 26, 27, .8)
+                rgba(35, 26, 27, .8) transparent;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .floor-box {
+      display: flex;
+      justify-content: center;
+      height: 200rpx;
+      margin-top: 5px;
+    }
+  }
+}

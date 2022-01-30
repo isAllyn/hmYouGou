@@ -2,7 +2,7 @@
  * @Author: Allyn
  * @Description: 
  * @Date: 2022-01-29 17:09:52
- * @LastEditTime: 2022-01-29 17:28:18
+ * @LastEditTime: 2022-01-30 14:11:14
  * @FilePath: \hmYouGou\main.js
  */
 import App from './App'
@@ -16,6 +16,39 @@ import Vue from 'vue'
  * @arguments: 
  */
 import store from '@/store/index.js'
+
+/**
+ * @description: 
+ * @event: 引入uview 组件ui
+ * @arguments: 
+ */
+import uView from "uview-ui";
+Vue.use(uView);
+
+/**
+ * @description: 
+ * @event: 引入 数据请求插件
+ * @arguments: 
+ */
+import { $http } from '@escook/request-miniprogram'
+uni.$http = $http
+$http.baseUrl = 'https://www.escook.cn'
+$http.beforeRequest = function () {
+  uni.showLoading({
+    title: '加载中...'
+  })
+}
+$http.afterRequest = function () {
+  uni.hideLoading()
+}
+
+/**
+ * @description: 
+ * @event: 引入自己封装的函数 定到uni实例上
+ * @arguments: 
+ */
+import myFn from '@/utils/selfTool.js'
+uni.$myFn = myFn
 
 Vue.config.productionTip = false
 App.mpType = 'app'
