@@ -2,29 +2,32 @@
  * @Author: Allyn
  * @Description: 数据管理  首页
  * @Date: 2022-01-30 13:54:40
- * @LastEditTime: 2022-01-30 15:49:44
+ * @LastEditTime: 2022-02-03 15:55:54
  * @FilePath: \hmYouGou\store\modules\home.js
  */
 
-import swiper1 from '@/static/home/swiper/11.jpeg'
-import swiper2 from '@/static/home/swiper/22.jpg'
-import swiper3 from '@/static/home/swiper/33.jpg'
-import swiper5 from '@/static/home/swiper/55.jpg'
-import swiper6 from '@/static/home/swiper/66.jpg'
-import swiper7 from '@/static/home/swiper/77.jpg'
+/* 轮播图图片 */
+let swiper1='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/swiper/11.jpeg'
+let swiper2='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/swiper/22.jpg'
+let swiper3='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/swiper/33.jpg'
+let swiper5='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/swiper/55.jpg'
+let swiper6='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/swiper/66.jpg'
+let swiper7='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/swiper/77.jpg'
 
-import fenlei from '@/static/home/nav/navFenLei.png'
-import miaosha from '@/static/home/nav/navMiaoSha.png'
-import chaoShi from '@/static/home/nav/navChaoShi.png'
-import MuYin from '@/static/home/nav/navMuYin.png'
+/* nav导航栏图片 */
+let fenlei='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/nav/navFenLei.png'
+let miaosha='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/nav/navMiaoSha.png'
+let chaoShi='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/nav/navChaoShi.png'
+let MuYin='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/nav/navMuYin.png'
 
-import louCeng1 from '@/static/home/louceng/1.jpg'
-import louCeng2 from '@/static/home/louceng/2.jpg'
-import louCeng3 from '@/static/home/louceng/3.jpg'
-import louCeng4 from '@/static/home/louceng/4.jpg'
-import louCeng5 from '@/static/home/louceng/5.jpg'
-import louCeng6 from '@/static/home/louceng/6.jpg'
-import louCeng7 from '@/static/home/louceng/7.jpg'
+/* 楼层当中的图片 */
+let louCeng1='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/1.jpg'
+let louCeng2='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/2.jpg'
+let louCeng3='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/3.jpg'
+let louCeng4='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/4.jpg'
+let louCeng5='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/5.jpg'
+let louCeng6='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/6.jpg'
+let louCeng7='https://images.weserv.nl/?url=https://gitee.com/isAllyn/image-depot/raw/master/hmYouGou/louCeng/7.jpg'
 
 export default {
     namespaced: true,
