@@ -6,9 +6,40 @@
     color: teal;
     background-color: #6f8da7;
 
-    /* 给轮播一个阴影看看 */
-    ::v-deep .u-swiper .u-swiper__wrapper .u-swiper__wrapper__item {
-      box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    .card-swiper swiper-item {
+      padding: 0rpx 0rpx 88rpx 0rpx;
+
+      .swiper-item {
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+      }
+    }
+
+    /* 自定义指示点*/
+    .dots {
+      position: absolute;
+      top: 75%;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .dot-container {
+        display: grid;
+        justify-content: center;
+        height: 10rpx;
+        opacity: .8;
+
+        grid-template-columns: repeat(auto-fill, 50px);
+
+        .dot-item {
+          margin-right: 10px;
+          border-radius: 10px;
+          background-color: #fff;
+        }
+
+        .active {
+          background-color: #007aff;
+        }
+      }
     }
 
     /* 搜索框 */

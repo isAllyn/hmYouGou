@@ -20,6 +20,9 @@ export default {
 </script>
 
 <style lang='scss'>
+/* colorUI 组件库样式 */
+@import "~@/colorUI/main.css";
+@import "~@/colorUI/icon.css";
 
 /*每个页面公共css */
 /* uview ui 基础样式 */
