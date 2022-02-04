@@ -1,0 +1,11 @@
+接口
+	（换取用户token）
+	post请求：https://www.escook.cn/api/public/v1/users/wxlogin
+	所需要的参数：  const query = {
+        code: res.code,
+        encryptedData: info.encryptedData,
+        iv: info.iv,
+        rawData: info.rawData,
+        signature: info.signature
+      }
+	
