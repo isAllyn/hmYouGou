@@ -13,6 +13,7 @@
         :autoplay="true"
         interval="1500"
         duration="500"
+		:circular='true'
         @change="cardSwiper">
         <swiper-item @click="swiperClick"
           v-for="(item, index) in list3"

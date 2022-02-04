@@ -33,8 +33,7 @@
             "path" : "pages/zhonXin/zhonXin",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationStyle": "custom"
             }
             
         }

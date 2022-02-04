@@ -1,0 +1,91 @@
+.login-template {
+  height: 100%;
+
+  /* 上部分 */
+  .top-container {
+    height: 30%;
+
+    .touXiang {
+      /* 头像 */
+      display: grid;
+      height: 60%;
+
+      grid-template-columns: 1fr 4fr;
+
+      .userTouxiang {
+        align-self: center;
+        width: 200rpx;
+        height: 200rpx;
+      }
+
+      /* 名称 */
+      .userName {
+        .userName-top {
+          font-size: 17px;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+          text-indent: 1em;
+          color: white;
+        }
+      }
+    }
+
+    /* 钱包 */
+    .qianBao {
+      display: grid;
+      width: 100%;
+      height: 20%;
+      color: white;
+
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .item {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+
+        .number {
+          font-family: numberFont;
+          font-size: 20px;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          height: 50%;
+        }
+
+        .text {
+          height: 50%;
+        }
+      }
+    }
+
+    /* 卡片 */
+    .cu-list.grid {
+      height: 20%;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+
+  /* 下部分 */
+  .bottom-container {
+    position: relative;
+    height: 30%;
+
+    /* 退出登录 */
+    .loginOut {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      width: 88%;
+      transform: translateX(-50%);
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

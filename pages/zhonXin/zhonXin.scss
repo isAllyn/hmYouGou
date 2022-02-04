@@ -1,0 +1,23 @@
+.zhonXin-page {
+  height: 100vh;
+  background-position: center;
+  background-size: 100% 100%;
+
+  /* 消除导航栏下边的白边 */
+  ::v-deep .uni-navbar .uni-navbar__content {
+    border-bottom: 0;
+  }
+
+  /* 未登录下 */
+  .noLogin {
+    .login-btn {
+      width: 88%;
+      margin: 50% auto;
+    }
+  }
+
+  /* 登录状态下 */
+  .isLogin {
+    height: 100vh;
+  }
+}
