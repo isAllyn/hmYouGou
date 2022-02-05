@@ -22,14 +22,14 @@
       justify-content: center;
       width: 88rpx;
       height: 88rpx;
+      border: 3px solid;
       border-radius: 50%;
 
       &.checket {
         top: -10px;
         width: 90rpx;
         height: 90rpx;
-        transition: top .3s, background-color .3s, border .1s;
-        border: 6px solid;
+        transition: top .3s;
         background-color: #ffc059;
       }
 
@@ -37,13 +37,12 @@
         top: 0;
         width: 88rpx;
         height: 88rpx;
-        transition: top .1s, border .1s;
-        border: 0 solid;
+        transition: top .1s;
       }
 
       image {
-        width: 88%;
-        height: 88%;
+        width: 77%;
+        height: 77%;
       }
     }
 

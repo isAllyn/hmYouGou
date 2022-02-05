@@ -10,14 +10,19 @@
 
   /* 未登录下 */
   .noLogin {
+    height: 88vh;
+
     .login-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
       width: 88%;
-      margin: 50% auto;
+      transform: translateX(-50%);
     }
   }
 
   /* 登录状态下 */
   .isLogin {
-    height: 100vh;
+    height: 88vh;
   }
 }

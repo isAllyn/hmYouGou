@@ -1,0 +1,78 @@
+.fenLei-page {
+  display: grid;
+
+  grid-template-columns: 1fr 4fr;
+
+  /* 左侧 */
+  .left-container {
+    .left-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+    }
+
+    .checkItem {
+      position: relative;
+      background-color: white;
+
+      &::after {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        width: 2px;
+        height: 50%;
+        content: '';
+        background-color: red;
+      }
+    }
+  }
+
+  /* 右侧 */
+  .right-container {
+    width: 100%;
+
+    .right-item {
+      width: 100%;
+
+      .right-title {
+        font-size: 15px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+      }
+
+      .right-bd {
+        display: grid;
+        padding-left: 5px;
+
+        grid-template-columns: repeat(auto-fill, 77px);
+        column-gap: 7px;
+        row-gap: 7px;
+
+        .bd-item {
+          position: relative;
+          overflow: hidden;
+          height: 88px;
+          border-radius: 10px;
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+
+          .item-title {
+            font-weight: 600;
+            position: absolute;
+            bottom: 1px;
+            left: 2px;
+            color: white;
+          }
+
+          image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

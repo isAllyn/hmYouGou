@@ -2,7 +2,7 @@
  * @Author: Allyn
  * @Description: 个人中心 登录状态组件
  * @Date: 2022-02-04 19:39:43
- * @LastEditTime: 2022-02-04 20:38:30
+ * @LastEditTime: 2022-02-05 17:37:22
  * @FilePath: \hmYouGou\uni_modules\login-page\index.vue
 -->
 
@@ -14,12 +14,12 @@
         <!-- 头像 -->
         <view
           class="userTouxiang cu-avatar xl round margin-left"
-          style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"
+          :style="{backgroundImage:`url(${userInfo.avatarUrl})`}"
         ></view>
         <!-- 名称 -->
         <view class="userName">
           <view class="userName-top">
-            我的名字
+            {{userInfo.nickName}}
           </view>
         </view>
       </view>
@@ -67,6 +67,7 @@
         >退出登录</button>
       </view>
     </view>
+  </view>
 </template>
 
 <script>
@@ -95,7 +96,12 @@ export default {
       ]
     };
   },
-
+  computed: {
+    /* 用户信息 */
+    userInfo() {
+      return this.$store.state.zhonXin.userInfo.userInfo
+    }
+  },
   mounted() {
 
   },
