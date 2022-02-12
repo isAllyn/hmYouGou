@@ -1,0 +1,5 @@
+根据关键词搜索
+	get { query: '' }
+https://www.escook.cn/api/public/v1/goods/qsearch
+
+点击搜索建议的 Item 项，跳转到商品详情页面 并且传入goods_id

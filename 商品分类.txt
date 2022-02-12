@@ -1,0 +1,6 @@
+商品分类信息接口
+	https://www.escook.cn/api/public/v1/categories
+
+
+事件
+	点击三级分类跳转到商品列表页面 并传过去cat_id
