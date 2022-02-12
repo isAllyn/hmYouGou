@@ -1,0 +1,5 @@
+商品详情接口
+
+https://www.escook.cn/api/public/v1/goods/detail?goods_id
+
+点击购物车按钮进入购物车页面
