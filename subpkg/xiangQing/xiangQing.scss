@@ -1,0 +1,97 @@
+.page-xiangQing {
+  color: red;
+
+  /* 轮播 */
+  .swiper-container {
+    position: relative;
+    height: 487rpx;
+
+    .screen-swiper {
+      height: 487rpx;
+    }
+
+    .swiper-lineDot {
+      position: absolute;
+      bottom: 12px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 5px;
+
+      span {
+        width: 30px;
+        height: 100%;
+        margin: 0 10px 0 10px;
+        border-radius: 3px;
+        background-color: white;
+      }
+
+      .check {
+        background-color: teal;
+      }
+    }
+  }
+
+  /* 介绍 */
+  .referral-container {
+    display: flex;
+    height: 20vh;
+
+    .left {
+      display: flex;
+      flex: 5;
+      flex-direction: column;
+      width: 80%;
+      height: 100%;
+
+      .pri {
+        font-size: 20px;
+        margin-top: 10px;
+        text-indent: 1em;
+        color: #bc0002;
+      }
+
+      .text {
+        font-size: 15px;
+        overflow: hidden;
+        width: 100%;
+        padding-left: 6px;
+        word-break: break-word;
+        color: black;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+
+      .text {
+        color: black;
+      }
+    }
+  }
+
+  /* 图片 */
+  .iamges-container {
+    .image-item {
+      line-height: 200px;
+      width: 100%;
+      height: 200px;
+      text-align: center;
+      border: 1px solid teal;
+    }
+  }
+
+  /* 购物 */
+  .shopin-container {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 8vh;
+    background-color: red;
+  }
+}

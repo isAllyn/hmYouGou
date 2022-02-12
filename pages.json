@@ -84,7 +84,9 @@
           "path": "xiangQing/xiangQing",
           "style": {
             "navigationBarTitleText": "商品详情",
-            "enablePullDownRefresh": false
+            "enablePullDownRefresh": false,
+            "navigationBarBackgroundColor": "#bc0002",
+            "navigationBarTextStyle": "white"
           }
         },
         {
@@ -102,6 +104,19 @@
           }
         }
       ]
+    },
+    {
+      "root": "subpkg1",
+      "pages": [{
+                    "path" : "shop-page/shop-page",
+                    "style" :                                                                                    
+                {
+                    "navigationBarTitleText": "",
+                    "enablePullDownRefresh": false
+                }
+                
+                }
+            ]
     }
   ]
 }
