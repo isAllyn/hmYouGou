@@ -2,19 +2,22 @@
  * @Author: Allyn
  * @Description: tabBar组件
  * @Date: 2022-01-29 17:19:00
- * @LastEditTime: 2022-01-29 17:53:29
+ * @LastEditTime: 2022-02-12 16:20:35
  * @FilePath: \hmYouGou\components\tabBar.vue
 -->
 <template>
   <view :style="{backgroundColor:bgColor}"
-    class="tab-container">
-    <block v-for="(item,index) in list"
-      :key="item.name">
+        class="tab-container">
+    <block v-for="(item,index) in list" :key="item.name">
       <view class="item">
+
         <view @click="tabItemClick(index,item.page)"
-          class="item-icon"
-          :class="item.tclass"
-          :style="{borderColor:bgColor}">
+              class="item-icon" :class="item.tclass"
+              :style="{borderColor:bgColor}">
+          <view v-if="index===2" :class="item.tclass"
+                class="cu-tag badge">
+            <block>{{tagNumber}}</block>
+          </view>
           <image :src="item.icon" />
         </view>
         <view class="item-text">
@@ -39,10 +42,25 @@ export default {
   created() {
     this.list = this.$store.state.tabBar.list
   },
+  computed: {
+    shopInfo() {
+      return this.$store.state.shop.shopList
+    }
+  },
+  watch: {
+    shopInfo: {
+      handler(newv, oldv) {
+        this.tagNumber = newv.length
+      },
+      immediate: true,
+      deep: true
+    }
+  },
   data() {
     return {
       /* tabBar数据 */
-      list: []
+      list: [],
+      tagNumber: 0,//角标数据
     };
   },
 

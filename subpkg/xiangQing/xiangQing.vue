@@ -2,7 +2,7 @@
  * @Author: Allyn
  * @Description: 商品详情页面
  * @Date: 2022-02-12 14:03:44
- * @LastEditTime: 2022-02-12 15:24:56
+ * @LastEditTime: 2022-02-12 16:13:52
  * @FilePath: \hmYouGou\subpkg\xiangQing\xiangQing.vue
 -->
 <template>
@@ -73,11 +73,9 @@ export default {
       }, {
         icon: 'shop',
         text: '店铺',
-        info: 2,
       }, {
         icon: 'cart',
         text: '购物车',
-        info: 2
       }],
       buttonGroup: [{
         text: '加入购物车',
@@ -133,6 +131,20 @@ export default {
     this.TowerSwiper('swiperList');// 初始化towerSwiper 传已有的数组名即可
     this.getXiangQinInfo(opt.goods_id)//获取详情数据
   },
+  computed: {
+    shopInfo() {
+      return this.$store.state.shop.shopList
+    }
+  },
+  watch: {
+    shopInfo: {
+      handler(newv, oldv) {
+        this.options[2].info = newv.length
+      },
+      immediate: true,
+      deep: true
+    }
+  },
   methods: {
     /**
      * @event: 购物导航图案点击
@@ -141,9 +153,10 @@ export default {
      */
     ShopIconClick({ index }) {
       if (index === 2) {
-        uni.navigateTo({
-          url: '/subpkg1/shop-page/shop-page'
+        uni.switchTab({
+          url: '/pages/gouWu/gouWu'
         });
+        this.$store.commit('tabBar/setList', 2)
       }
     },
     /**
@@ -151,8 +164,11 @@ export default {
      * @arguments: 
      * @description: 
      */
-    shopingClick(e) {
-      console.log(e);
+    shopingClick({ index }) {
+      let { goods_name, goods_price } = this.xiangQinInfo
+      if (index === 0) {
+        this.$store.commit('shop/addShopList', { goods_name, goods_price })
+      }
     },
     /**
      * @event: 收藏按钮

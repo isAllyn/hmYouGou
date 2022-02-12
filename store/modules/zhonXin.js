@@ -2,7 +2,7 @@
  * @Author: Allyn
  * @Description: 数据管理 个人中心
  * @Date: 2022-02-04 18:57:05
- * @LastEditTime: 2022-02-12 12:30:53
+ * @LastEditTime: 2022-02-12 16:08:51
  * @FilePath: \hmYouGou\store\modules\zhonXin.js
  */
 
@@ -52,6 +52,7 @@ export default {
       })
       /* 退出登录要将 缓存过的数据都删除 */
       content.dispatch('storage/removeStorages', [], { root: true })
+      content.commit('shop/removeShopInfo', [], { root: true })
     },
   },
 }

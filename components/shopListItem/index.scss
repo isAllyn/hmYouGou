@@ -1,0 +1,65 @@
+.shop-item {
+  display: grid;
+  width: 100%;
+  height: 255rpx;
+  margin-bottom: 20px;
+
+  grid-template-columns: 10vw 30vw 30vw 30vw;
+  grid-template-areas: 'a b c c' 'a b c c' 'a b d e';
+
+  &:nth-child(1) {
+    margin-top: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 100px;
+  }
+
+  /* 单选 */
+  .checkItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: a;
+
+    .checkbox-group {
+      width: 20px;
+    }
+  }
+
+  /* 图片 */
+  .image {
+    grid-area: b;
+
+    image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  /* 文字 */
+  .text {
+    overflow: hidden;
+    padding: 5px;
+    color: black;
+
+    grid-area: c;
+  }
+
+  /* 价格 */
+  .price {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+
+    grid-area: d;
+  }
+
+  /* 进步器 */
+  .numberBtn {
+    grid-area: e;
+  }
+}

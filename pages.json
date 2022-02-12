@@ -20,8 +20,9 @@
     {
       "path": "pages/gouWu/gouWu",
       "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
+        "navigationBarTitleText": "购物车",
+        "enablePullDownRefresh": false,
+        "navigationBarBackgroundColor": "#0d83e9"
       }
     },
     {
@@ -107,16 +108,7 @@
     },
     {
       "root": "subpkg1",
-      "pages": [{
-                    "path" : "shop-page/shop-page",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
+      "pages": []
     }
   ]
 }

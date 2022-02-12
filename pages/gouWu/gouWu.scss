@@ -1,0 +1,23 @@
+.gouwu-page {
+  color: red;
+
+  /* 收货地址 */
+  .address-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+
+    .cu-btn {
+      width: 200px;
+    }
+  }
+
+  /* 线条 */
+  .line {
+    height: 10px;
+    background-color: black;
+  }
+
+  /* 列表 */
+}
