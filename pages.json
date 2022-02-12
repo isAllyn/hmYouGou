@@ -1,122 +1,107 @@
 {
-	"pages": [
-		{
-            "path" : "pages/shouYe/shouYe",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "hmYouGou",
-				"navigationBarBackgroundColor":"#6f8da7",
-				"navigationBarTextStyle":"white",
-                "enablePullDownRefresh": false
-            }
-            
+  "pages": [
+    {
+      "path": "pages/shouYe/shouYe",
+      "style": {
+        "navigationBarTitleText": "hmYouGou",
+        "navigationBarBackgroundColor": "#6f8da7",
+        "navigationBarTextStyle": "white",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/fenLei/fenLei",
+      "style": {
+        "navigationBarTitleText": "分类",
+        "enablePullDownRefresh": false,
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/gouWu/gouWu",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    },
+    {
+      "path": "pages/zhonXin/zhonXin",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "custom-tab-bar/index",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+    }
+  ],
+  "easycom": {
+    "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "iconPath": "static/tabBar/shouYe.png",
+        "selectedIconPath": "static/tabBar/shouYe.png",
+        "pagePath": "pages/shouYe/shouYe",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/fenLei/fenLei",
+        "iconPath": "static/tabBar/fenLei.png",
+        "selectedIconPath": "static/tabBar/fenLei.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/gouWu/gouWu",
+        "selectedIconPath": "static/tabBar/gouWuChe.png",
+        "text": "购物车",
+        "iconPath": "static/tabBar/gouWuChe.png"
+      },
+      {
+        "pagePath": "pages/zhonXin/zhonXin",
+        "iconPath": "static/tabBar/huiYuan.png",
+        "selectedIconPath": "static/tabBar/huiYuan.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "subPackages": [
+    {
+      "root": "subpkg",
+      "pages": [
+        {
+          "path": "xiangQing/xiangQing",
+          "style": {
+            "navigationBarTitleText": "商品详情",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "shopList/shopList",
+          "style": {
+            "navigationBarTitleText": "",
+            "enablePullDownRefresh": false
+          }
+        },
+        {
+          "path": "search/search",
+          "style": {
+            "navigationBarTitleText": "搜索",
+            "enablePullDownRefresh": false
+          }
         }
-        ,{
-            "path" : "pages/fenLei/fenLei",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/gouWu/gouWu",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/zhonXin/zhonXin",
-            "style" :                                                                                    
-            {
-                "navigationStyle": "custom"
-            }
-            
-        }
-        ,{
-            "path" : "custom-tab-bar/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
-    "easycom": {
-		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
-	},
-	"tabBar":{
-		"custom": true,
-		"list":[
-			{
-				"iconPath":"static/tabBar/shouYe.png",
-				"selectedIconPath":"static/tabBar/shouYe.png",
-				"pagePath":"pages/shouYe/shouYe",
-				"text":"首页"
-			},
-			{
-				"pagePath":"pages/fenLei/fenLei",
-				"iconPath":"static/tabBar/fenLei.png",
-				"selectedIconPath":"static/tabBar/fenLei.png",
-				"text":"分类"
-			},
-			{
-				"pagePath":"pages/gouWu/gouWu",
-				"selectedIconPath":"static/tabBar/gouWuChe.png",
-				"text":"购物车",
-				"iconPath":"static/tabBar/gouWuChe.png"
-			},
-			{
-				"pagePath":"pages/zhonXin/zhonXin",
-				"iconPath":"static/tabBar/huiYuan.png",
-				"selectedIconPath":"static/tabBar/huiYuan.png",
-				"text":"个人中心"
-			}
-		]
-	},
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
-	},
-	"subPackages":[
-		{
-			"root":"subpkg",
-			"pages":[
-				{
-				        "path" : "xiangQing/xiangQing",
-				        "style" :                                                                                    
-				    {
-				        "navigationBarTitleText": "",
-				        "enablePullDownRefresh": false
-				    }
-				    
-				    }
-                ,{
-                    "path" : "shopList/shopList",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-                ,{
-                    "path" : "search/search",
-                    "style" :                                                                                    
-                {
-                    "navigationBarTitleText": "",
-                    "enablePullDownRefresh": false
-                }
-                
-                }
-            ]
-		}
-	]
+      ]
+    }
+  ]
 }

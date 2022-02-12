@@ -2,68 +2,61 @@
  * @Author: Allyn
  * @Description: 
  * @Date: 2022-02-03 15:19:17
- * @LastEditTime: 2022-02-05 18:51:57
+ * @LastEditTime: 2022-02-12 10:59:27
  * @FilePath: \hmYouGou\pages\fenLei\fenLei.vue
 -->
 <template>
   <view class="fenLei-page">
-    <!-- 左侧 -->
-    <view class="left-container">
-      <scroll-view
-        scroll-y
-        :style="{height:'100vh'}"
-      >
-        <block
-          v-for="item in fenLeiInfo"
-          :key="item.cat_name"
-        >
-          <view
-            @click="leftItemClick(item.cat_id)"
-            class="left-item"
-            :class="item.cat_id===checkId?'checkItem':''"
-          >
-            {{item.cat_name}}
-          </view>
-        </block>
-        <!-- 叠底用 -->
-        <view class="left-item">
-        </view>
-      </scroll-view>
+    <view @click="searchInputClick" class="view-top">
+      <uni-icons type="search" color='white' size="30">
+      </uni-icons>
+      点击进入搜索页面
     </view>
-    <!-- 右侧 -->
-    <view class="right-container">
-      <scroll-view
-        :scroll-top='scrollTop'
-        scroll-y
-        :style="{height:'100vh'}"
-      >
-        <block
-          v-for="item in rightInfo"
-          :key="item.cat_name"
-        >
-          <view class="right-item">
-            <!-- 标题 -->
-            <view class="right-title">-{{item.cat_name}}-</view>
-            <!-- 内容 -->
-            <view class="right-bd">
-              <block
-                v-for="item1 in item.children"
-                :key="item1.cat_name"
-              >
-                <view
-                  class="bd-item"
-                  @click="level3Click(item1.cat_id)"
-                >
-                  <image :src="item1.cat_icon" />
-                  <view class="item-title">{{item1.cat_name}}</view>
-                </view>
-              </block>
+    <view class="view-bottom">
+      <!-- 左侧 -->
+      <view class="left-container">
+        <scroll-view scroll-y :style="{height:'80vh'}">
+          <block v-for="item in fenLeiInfo"
+                 :key="item.cat_name">
+            <view @click="leftItemClick(item.cat_id)"
+                  class="left-item"
+                  :class="item.cat_id===checkId?'checkItem':''">
+              {{item.cat_name}}
             </view>
+          </block>
+          <!-- 叠底用 -->
+          <view class="left-item">
           </view>
-        </block>
-        <!-- 叠底用 -->
-        <view style="height:88px;"></view>
-      </scroll-view>
+        </scroll-view>
+      </view>
+      <!-- 右侧 -->
+      <view class="right-container">
+        <scroll-view :scroll-top='scrollTop' scroll-y
+                     :style="{height:'80vh'}">
+          <block v-for="item in rightInfo"
+                 :key="item.cat_name">
+            <view class="right-item">
+              <!-- 标题 -->
+              <view class="right-title">-{{item.cat_name}}-
+              </view>
+              <!-- 内容 -->
+              <view class="right-bd">
+                <block v-for="item1 in item.children"
+                       :key="item1.cat_name">
+                  <view class="bd-item"
+                        @click="level3Click(item1.cat_id)">
+                    <image :src="item1.cat_icon" />
+                    <view class="item-title">
+                      {{item1.cat_name}}</view>
+                  </view>
+                </block>
+              </view>
+            </view>
+          </block>
+          <!-- 叠底用 -->
+          <view style="height:88px;"></view>
+        </scroll-view>
+      </view>
     </view>
   </view>
 </template>
@@ -140,6 +133,16 @@ export default {
       uni.navigateTo({
         url: `/subpkg/shopList/shopList?id=${id}`
       });
+    },
+    /**
+     * @description: 
+     * @event: 搜索框事件:点击进入搜索页面
+     * @arguments: 
+     */
+    searchInputClick() {
+      uni.navigateTo({
+        url: '/subpkg/search/search'
+      })
     }
   }
 }

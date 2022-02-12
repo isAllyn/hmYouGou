@@ -1,0 +1,40 @@
+.search-page {
+  height: 100vh;
+  background-color: teal;
+
+  /* 搜索 */
+  .searchInput {
+    height: 10vh;
+  }
+
+  /* 展示 */
+  .view-container {
+    background-color: teal;
+
+    /* 历史 */
+    .search-history {
+      /* 头部 */
+      .history-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 30px;
+        padding: 0 10px 0 10px;
+        color: white;
+        border-bottom: 1px solid black;
+      }
+
+      /* 内容 */
+      .history-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 0 0 10px;
+
+        uni-tag {
+          margin: 10px 10px 10px 0;
+        }
+      }
+    }
+  }
+}
